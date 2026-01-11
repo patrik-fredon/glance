@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . /app
 RUN CGO_ENABLED=0 go build .
 
-FROM alpine:3.20
+FROM alpine:3.23.2
 
 WORKDIR /app
 COPY --from=builder /app/glance .
